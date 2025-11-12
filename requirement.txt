@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pandas
+numpy
+pytesseract
+opencv-python
+pillow
+python-multipart
+matplotlib
+scikit-learn
+aiofiles
+sqlalchemy

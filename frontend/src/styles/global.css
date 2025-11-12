@@ -1,0 +1,100 @@
+/* ========== MZ/X 4.6 FUSION PRO FRONTEND STÍLUS ========== */
+/* Színvilág: ipari sötétszürke + neonkék-türkiz fényhatások */
+
+:root {
+  --fusion-bg: #05070a;            /* háttér */
+  --fusion-glow: #00bcd4;          /* fő neonkék fény */
+  --fusion-accent: #02f0ff;        /* kékes türkiz kiemelés */
+  --fusion-text: #e0f7fa;          /* halvány világoskék szöveg */
+  --fusion-secondary: #0d1b2a;     /* panel háttér */
+  --fusion-border: #0a3d62;        /* vékony panelkeret */
+}
+
+body {
+  background-color: var(--fusion-bg);
+  color: var(--fusion-text);
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Fő dashboard elrendezés */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Fusion Core - AI központi gömb */
+.fusion-core {
+  background: radial-gradient(circle, var(--fusion-glow), transparent 70%);
+  box-shadow: 0 0 80px var(--fusion-glow);
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fusion-text);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 20px var(--fusion-accent);
+  animation: pulse 4s infinite ease-in-out;
+}
+
+/* Bal/jobb panel */
+.side-panel {
+  background-color: var(--fusion-secondary);
+  border: 1px solid var(--fusion-border);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.3);
+  width: 90%;
+  height: 80%;
+  overflow-y: auto;
+}
+
+/* Chat konzol */
+.chat-console {
+  grid-column: 1 / 4;
+  background-color: var(--fusion-secondary);
+  border-top: 1px solid var(--fusion-border);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--fusion-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.chat-input {
+  width: 85%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #071017;
+  color: var(--fusion-text);
+}
+
+.chat-button {
+  background-color: var(--fusion-glow);
+  border: none;
+  color: #000;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 40px var(--fusion-glow); }
+  50% { box-shadow: 0 0 120px var(--fusion-accent); }
+  100% { box-shadow: 0 0 40px var(--fusion-glow); }
+}
